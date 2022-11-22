@@ -81,5 +81,5 @@ app.post("/books/", async (request, response) => {
       );`;
 
   const dbResponse = await db.run(addBookQuery);
-  response.send(dbResponse);
+  response.send(dbResponse.lastID);
 });
